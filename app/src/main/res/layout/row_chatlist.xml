@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:contentPadding="3dp">
+    <!--diseño para que la lista de chat se muestre en la vista de reciclaje-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <!-- ImageView: Imagen de perfil de usuario-->
+        <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+            android:id="@+id/profileIv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_profile_black"/>
+        <!--ImageView: en línea / fuera de línea-->
+        <ImageView
+            android:id="@+id/onlineStatusIv"
+            android:layout_width="15dp"
+            android:layout_height="15dp"/>
+        <!-- TextView: Nombre de usuario -->
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="His Name"
+            android:layout_marginStart="4dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            android:layout_toEndOf="@id/profileIv"/>
+        <!-- TextView: Último mensaje (por remitente / receptor)-->
+        <TextView
+            android:id="@+id/lastMessageTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The last message"
+            android:layout_marginStart="4dp"
+            android:maxLines="2"
+            android:layout_toEndOf="@id/profileIv"
+            android:layout_below="@id/nameTv"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#2C000000"
+        android:layout_marginStart="70dp"
+        />
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.keneth.android.androidnatural">
+    <!-- 01 permiso d einternet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".MiAplicacion"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Android Natural"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ComentariosPostTextActivity"></activity>
+        <activity
+            android:name=".PostSearchActivity"
+            android:theme="@style/AppThemeDos" />
+        <activity android:name=".AddTextPostActivity" />
+        <activity
+            android:name=".ForoActivity"
+            android:theme="@style/AppThemeDos" />
+        <activity
+            android:name=".SinReciclarActivity"
+            android:theme="@style/AppThemeDos" />
+        <activity
+            android:name=".CiudadesActivity"
+            android:theme="@style/AppThemeDos" />
+        <activity
+            android:name=".SplashScreenActivity"
+            android:theme="@style/AppThemeDos" />
+        <activity
+            android:name=".CategoryActivity"
+            android:theme="@style/AppThemeDos" />
+        <activity android:name=".CuentaActivity" />
+        <activity
+            android:name=".OpcionesActivity"
+            android:theme="@style/AppThemeDos" />
+        <activity
+            android:name=".EditarPerfilActivity"
+            android:theme="@style/AppThemeDos" />
+        <activity android:name=".ComentariosActivity2" />
+        <activity android:name=".PostLikedByActivity" />
+        <activity android:name=".AjustesActivity2" />
+        <activity android:name=".DetallesPostActivity" />
+        <activity android:name=".ThereProfileActivity" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" /> <!-- optional (needed if default theme has no action bar) -->
+        <!--
+Los filtros de intención informan al sistema qué intenciones está dispuesto a aceptar un componente de la aplicación.
+           Para recibir el tipo de texto / imagen de intenciones, agregaremos un filtro de intenciones a la actividad, que manejará esos datos.
+        -->
+        <!--
+<activity android:name=".AddPostActivity">
+            <intent-filter>
+
+                <!- Para imagen
+        -->
+        <!--
+       <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+            </intent-filter>
+            <intent-filter>
+
+                <!- Para Texto
+        -->
+        <!--
+      <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        -->
+        <!-- add post sinnombre2 -->
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity android:name=".AddPostActivity" /> <!-- add post sinnombre2 -->
+        <activity
+            android:name=".ChatActivity"
+            android:theme="@style/AppThemeDos" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".TableroActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".RegistrarActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppThemeDos" />
+
+        <service
+            android:name=".notifications.FirebaseMessaging"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service> <!-- definir proveedor de archivos -->
+        <!--
+ Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/logo" />
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/selector" />
+        <!--
+Establezca android: exported atribuido a falso:
+          el FileProvider no necesita ser público ->
+        <! - Establezca el atributo android: grantUriPermissions en verdadero,
+          para permitirle otorgar acceso temporal a los archivos. :
+        -->
+        <!--  -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.keneth.android.androidnatural.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/paths" />
+        </provider>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

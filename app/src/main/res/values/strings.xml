@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Android Natural</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="txt_info">Recuerda que si deseas realizar una publucacion de SOLO TEXTO no necesitas adicionar una imagen a la publicación.</string>
+    <string name="powered_by">La me jor APP del MUNDO.</string>
+
+    <string-array name="ciudades">
+        <item></item>
+        <item>Bogota</item>
+        <item>Barranquilla</item>
+        <item>Cundinamarca</item>
+        <item>Cali</item>
+        <item>Pasto</item>
+        <item>Pasto</item>
+        <item>Pasto</item>
+        <item>Pasto</item>
+        <item>Pasto</item>
+        <item>Pasto</item>
+        <item>Pasto</item>
+        <item>Pasto</item>
+        <item>Pasto</item>
+        <item>Pasto</item>
+        <item>Pasto</item>
+        <item>Pasto</item>
+        <item>Pasto</item>
+        <item>Pasto</item>
+        <item>Pasto</item>
+        <item>Pasto</item>
+        <item>Pasto</item>
+
+
+    </string-array>
+
+    <string-array name="categorias">
+        <item></item>
+        <item>Plastico</item>
+        <item>Madera</item>
+        <item>Metal</item>
+        <item>Escombro</item>
+        <item>Caucho</item>
+
+
+    </string-array>
+
+</resources>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Modificar Contraseña"
+        android:textColor="@color/colorBlack"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
+
+    <!--EditText= Contraseña de entrada actual / antigua / anterior-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/passwordTIL"
+        android:layout_below="@+id/emailTIL"
+        app:passwordToggleEnabled="true"
+        >
+        <EditText
+            android:id="@+id/passwordEt"
+            android:inputType="textPassword"
+            android:hint="Actual contraseña"
+            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--EditText= Nueva contraseña de entrada-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/newPasswordTIL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/emailTIL"
+        app:passwordToggleEnabled="true"
+        >
+
+        <EditText
+            android:id="@+id/newPasswordEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nueva contraseña"
+            android:textSize="15sp"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Button : Midificar Contraseña-->
+    <Button
+        android:id="@+id/updatePasswordBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Modificar"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>

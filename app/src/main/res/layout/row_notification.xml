@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/colorWithe">
+
+    <!--fila para notificación-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:id="@+id/avatarIv"
+            android:src="@drawable/ic_profile_black"
+            android:padding="5dp"
+            android:layout_gravity="center"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre"
+                android:textSize="14sp"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:id="@+id/notificationTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Notificacion"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/timeTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Time"
+                android:textSize="10sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

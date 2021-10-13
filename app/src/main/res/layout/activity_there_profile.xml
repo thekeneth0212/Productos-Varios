@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F1EDED"
+    tools:context=".ThereProfileActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Foto de cubierta-->
+            <!--<ImageView
+                android:id="@+id/coverIv"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:scaleType="fitXY"
+                android:background="@color/colorAccent">
+            </ImageView>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/datos2"
+                android:background="@drawable/fondo_degradado"
+                android:orientation="vertical">
+
+            <!--CUBRE LA IMAGEN DE PERFIL-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/imagen"
+                >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
+                android:id="@+id/g">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/avatarIv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1:1"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp"
+                android:background="@drawable/ic_profile_black"
+                />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imagen"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nameTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="25dp"
+                        android:text="Nombre"
+                        android:textAlignment="center"
+                        />
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/datos1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/imagen">
+
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:id="@+id/toolbar1"
+                    >
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_correo"/>
+                    <TextView
+                        android:id="@+id/emailTv"
+                        android:layout_below="@+id/nameTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:text="Correo"
+                        android:textAlignment="textStart"/>
+
+                </androidx.appcompat.widget.Toolbar>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:id="@+id/toolbar2"
+                    >
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_usuario"/>
+                    <TextView
+                        android:id="@+id/phoneTv"
+                        android:layout_below="@+id/emailTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:text="Telefono"
+                        android:textAlignment="textStart"/>
+
+                </androidx.appcompat.widget.Toolbar>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:id="@+id/toolbar3"
+                    >
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_ubicacion"/>
+                    <TextView
+                        android:id="@+id/locationTv"
+                        android:layout_below="@+id/emailTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:text="Ubicación"
+                        android:textAlignment="textStart"/>
+
+                </androidx.appcompat.widget.Toolbar>
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/datos0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_below="@+id/datos1">
+
+                <ImageView
+                    android:id="@+id/commentBtn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_comment_black"
+                    android:layout_gravity="end"
+                    android:paddingEnd="5dp"
+                    />
+
+            </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/datos"
+                android:layout_below="@+id/datos2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dos"
+                    android:layout_below="@+id/emailTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="26dp"
+                    android:textColor="@color/colorUno"
+                    android:paddingTop="15sp"
+                    android:textAlignment="center"/>
+                <TextView
+                    android:id="@+id/uno"
+                    android:layout_below="@+id/emailTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="26dp"
+                    android:textColor="@color/colorUno"
+                    android:paddingTop="15sp"
+                    android:textAlignment="center"/>
+                <TextView
+                    android:id="@+id/locationTv1"
+                    android:layout_below="@+id/emailTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Historial"
+                    android:textSize="26dp"
+                    android:textColor="@color/colorUno"
+                    android:paddingTop="15sp"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+
+            <!--RecyclerView: publicaciones específicas del usuario-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_posts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/datos"
+                android:padding="5dp"
+                />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

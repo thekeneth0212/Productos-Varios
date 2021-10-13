@@ -1,0 +1,79 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.gms.google-services'
+
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.keneth.android.androidnatural"
+        minSdkVersion 17
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true    //ERROR 36536>
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+
+    implementation 'androidx.multidex:multidex:2.0.1'      //ERROR 36536>
+
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation "androidx.recyclerview:recyclerview:1.2.1"
+    implementation "androidx.cardview:cardview:1.0.0"
+
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.google.firebase:firebase-auth:21.0.1'
+    implementation 'com.google.firebase:firebase-database:20.0.0'
+    implementation 'com.google.firebase:firebase-storage:20.0.0'
+    implementation 'com.google.firebase:firebase-messaging:21.1.0'//mirar esto//com.google.firebase:firebase-messaging:22.0.0
+
+    //xd
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+    implementation 'com.rengwuxian.materialedittext:library:2.1.4'
+    //xd
+    //librerio inicio de sesion con google
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    implementation 'com.github.mohammadatif:CircularImageView:1.0.1'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    implementation 'com.android.volley:volley:1.2.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    api 'com.theartofdev.edmodo:android-image-cropper:'
+
+
+}

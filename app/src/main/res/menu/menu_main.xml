@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <item android:id="@+id/action_settings"
+        android:title="Ajustes" />
+
+    <item android:id="@+id/action_settings2"
+        android:title="Ajustes"/>
+
+    <item android:id="@+id/action_prueba"
+        android:title="Cuenta"/>
+
+    <item android:id="@+id/action_contraseña"
+        android:title="Cambiar contraseña"/>
+
+    <item android:id="@+id/action_logout"
+        android:title="Cerrar sesion"/>
+
+    <item
+        android:id="@+id/action_search"
+        android:title="Buscar"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_search_white"/>
+    <!--severo =  app:showAsAction="always"-->
+
+    <item android:id="@+id/action_add_post"
+        android:title="Add Post"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_add_image"/>
+
+</menu>

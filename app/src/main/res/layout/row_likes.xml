@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+            android:id="@+id/avatarIv"
+            android:src="@drawable/ic_profile_black"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="5dp"/>
+
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Person Name"
+                android:maxLines="1"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                />
+            <TextView
+                android:id="@+id/emailTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Person Email"
+                android:maxLines="1"
+                />
+
+        </LinearLayout>
+
+        <!--Agregue iconos para indicar bloqueado / desbloqueado-->
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

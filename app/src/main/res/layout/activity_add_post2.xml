@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPostActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+            <!--ImageView: entrada de imagen de publicación-->
+           <ImageView
+                android:id="@+id/pImageIv"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+               app:layout_constraintDimensionRatio="1:1"
+               android:background="@drawable/add_imagen"
+                />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--            android:minHeight="200dp"-->
+        </LinearLayout>
+
+        <!--EditText: ingrese el título de la publicación-->
+        <EditText
+            android:id="@+id/pTitleEt"
+            android:padding="10dp"
+            android:hint="Titulo"
+            android:singleLine="true"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/editextstyle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <!--EditText: ingrese la descripción de la publicación-->
+        <EditText
+            android:id="@+id/pDescriptionEt"
+            android:background="@drawable/editextstyle1"
+            android:padding="10dp"
+            android:hint="Descripción"
+            android:inputType="textCapSentences|textMultiLine"
+            android:minHeight="120dp"
+            android:gravity="start"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            android:layout_margin="8dp"
+            android:background="@drawable/cuadrado">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <Spinner
+                    android:id="@+id/spinner1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_weight="1"
+                    />
+
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_ubicacion"
+                    android:id="@+id/uu"/>
+
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/categoria"
+                    android:hint="categoria"
+                    app:met_floatingLabel="normal"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    />
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </LinearLayout>
+
+        <!--Botón: Publicar publicación en firebase-->
+        <Button
+            android:id="@+id/pUploadBtn"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="Publicar" />
+
+
+    </LinearLayout>
+
+</ScrollView>

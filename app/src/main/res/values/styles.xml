@@ -1,0 +1,57 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#00B8D4</item>
+        <item name="colorPrimaryDark">@color/colorDos</item> <!--color de arriba (wifi,hora)-->
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Widget.ActionBar.Title" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:icon">@color/colorBlack</item>
+    </style>
+
+
+
+    <style name="AppThemeDos" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorBlack</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="mySpinnerItemStyle" parent="Base.Widget.AppCompat.Spinner">
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <!--Para actividades que contienen barra de herramientas-->
+    <!-- Tema sin ActionBar-->
+    <style name="AppThemeNo" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorBlack</item>
+        <item name="colorPrimaryDark">@color/colorWithe</item>
+        <item name="colorAccent">@color/colorWithe</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+
+
+    <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <!-- Elimina el icono de búsqueda -->
+        <item name="searchIcon">@drawable/ic_search_white_oscuro</item>
+        <!-- Elimina el "subrayado" en el texto. -->
+        <item name="queryBackground">@color/colorWithe</item>
+        <!-- Elimina el icono de búsqueda cuando se expande SearchView -->
+        <item name="searchHintIcon">@null</item>
+        <!-- El texto de sugerencia que aparece cuando el usuario no ha escrito nada -->
+        <item name="queryHint">"Buscar"</item>
+
+        <!--<item name="android:background">@drawable/redondeado</item>=-->
+    </style>
+
+</resources>

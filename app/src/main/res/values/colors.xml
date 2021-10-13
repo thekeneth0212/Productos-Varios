@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF9E80</color>
+    <!--<color name="colorPrimary">@drawable/gradientnature</color>-->
+    <color name="colorPrimaryDark">#FF9E80</color>
+    <color name="colorAccent">@color/colorTres</color>
+    <color name="colorBlack">#000</color>
+    <color name="colorWithe">#fff</color>
+
+    <color name="colorUno">#2363CC</color>
+    <color name="colorDos">#00B8D4</color>
+    <color name="colorTres">#8ECA47</color>
+
+    <color name="colorCuatro">#00FFD600</color>
+    <color name="colorCinco">#97FFFFFF</color>
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+    <!-- ImageView: Imagen de perfil de usuario-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+        <ImageView
+            android:id="@+id/pImageIv"
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            app:layout_constraintDimensionRatio="1:1"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp"
+            android:layout_margin="1dp"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--ImageView: en línea / fuera de línea-->
+    <ImageView
+        android:id="@+id/estadoIv"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
